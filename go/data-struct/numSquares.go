@@ -18,13 +18,13 @@ func numSquares(n int) int {
         squares = append(squares, i * i)
     }
     //----广度优先遍历队列squares----
-    result := BreadthFirstSearchNumSquares(n, squares)
+    result := breadthFirstSearchNumSquares(n, squares)
     //fmt.Println(result[1:])
     return result[1]
 }
 
 //----广度优先遍历队列squares----
-func BreadthFirstSearchNumSquares(n int, squares []int) []int {
+func breadthFirstSearchNumSquares(n int, squares []int) []int {
     queue := [][]int{}
     for _, sq := range squares {
         left := n - sq
